@@ -1,0 +1,31 @@
+._header {
+   background-color: $primaryColor;
+   border: 1px solid red;
+
+   .container {
+      padding: 0 15px;
+   }
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+   }
+
+
+   &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__logo {
+      margin-right: 45px;
+   }
+
+   &__phone {
+      display: flex;
+
+   }
+}

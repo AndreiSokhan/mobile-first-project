@@ -1,2 +1,31 @@
-*,:after,:before{margin:0;padding:0;box-sizing:border-box}body,html{font-family:Montserrat,sans-serif}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html,
+body {
+  font-family: 'Montserrat', sans-serif; }
+
+._header {
+  background-color: #fff;
+  border: 1px solid red; }
+  ._header .container {
+    padding: 0 15px; }
+  ._header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px; }
+  ._header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  ._header__logo {
+    margin-right: 45px; }
+  ._header__phone {
+    display: flex; }
+
 /*# sourceMappingURL=style.min.css.map */
