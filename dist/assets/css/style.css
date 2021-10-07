@@ -1,3 +1,27 @@
+._header .container, .main .container {
+    padding: 0 15px;
+    width: 100%;
+    min-width: 1140px;
+}
+
+@media screen and (min-width: 576px) {
+    ._header .container, .main .container {
+        padding: 0 35px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    ._header .container, .main .container {
+        padding: 0 50px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    ._header .container, .main .container {
+        padding: 0;
+    }
+}
+
 *,
 *::after,
 *::before {
@@ -9,6 +33,7 @@
 html,
 body {
     font-family: 'Montserrat', sans-serif;
+    min-width: 320px;
 }
 
 ._header {
@@ -25,13 +50,165 @@ body {
     align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+    ._header__inner {
+        height: 100px;
+    }
+}
+
+._header__wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 ._header__logo {
     margin-right: 45px;
 }
 
-._header__phone {
+@media screen and (min-width: 576px) {
+    ._header__logo {
+        margin-right: 36px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    ._header__logo {
+        width: 140px;
+    }
+}
+
+._header__city-phone {
     font-size: 14px;
     font-weight: 400px;
     line-height: 17px;
     color: #5286EC;
+}
+
+@media screen and (min-width: 576px) {
+    ._header__city-phone {
+        display: none;
+    }
+}
+
+._header__phone {
+    display: none;
+}
+
+._header__phone span {
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 17px;
+    color: #B3B3B3;
+}
+
+@media screen and (min-width: 576px) {
+    ._header__phone {
+        display: block;
+    }
+}
+
+._header__phone-link {
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 17px;
+    color: #37373F;
+}
+
+@media screen and (min-width: 1280px) {
+    ._header__user {
+        display: none;
+    }
+}
+
+.main {
+    background-image: url(./../images/main-bg.jpg);
+    color: #fff;
+    background-size: cover;
+    background-position-x: 62%;
+}
+
+.main__inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 655px;
+}
+
+.main__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    color: #fff;
+    max-width: 247px;
+    margin-top: -6px;
+}
+
+.main__title span {
+    color: #FC9B09;
+}
+
+.main__price-box {
+    height: 93px;
+    width: 208px;
+    background-image: url(./../images/price-box.svg);
+    background-repeat: no-repeat;
+    margin: 36px 0 14px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 6px 15px;
+    margin-left: -5px;
+}
+
+.main__wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.main__priceLabel {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: inherit;
+    color: inherit;
+}
+
+.main__price {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: inherit;
+    color: inherit;
+}
+
+.main__percent {
+    border-radius: 50%;
+    -webkit-filter: drop-shadow(0px 4px 15px rgba(255, 255, 255, 0.25)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+    filter: drop-shadow(0px 4px 15px rgba(255, 255, 255, 0.25)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+    max-height: 47px;
+    margin-top: 10px;
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+}
+
+.main__btn {
+    width: 275px;
+    height: 68px;
+    border: 3px solid #fff;
+    border-radius: 7px;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 20px;
+    color: white;
+    -webkit-filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+    filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
 }

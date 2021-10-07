@@ -16,7 +16,7 @@ $breakpoints: (
 %container {
    padding: 0 15px;
    width: 100%;
-   min-width: 1140px;
+   max-width: 1140px;
 
    @media screen and (min-width: 576px) {
       padding: 0 35px;

@@ -15,5 +15,6 @@ body {
     min-width: 320px;
 }
 
+@import "./base/normalize";
 @import "./header";
 @import "./main-block";
