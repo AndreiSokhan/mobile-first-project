@@ -10,3 +10,28 @@ html,
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+._header {
+    background-color: #fff;
+}
+
+._header__inner {
+    height: 60px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+._header__logo {
+    margin-right: 45px;
+}
+
+._header__phone {
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 17px;
+    color: #5286EC;
+}
