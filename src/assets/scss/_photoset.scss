@@ -1,0 +1,23 @@
+.photoset {
+   background-color: $primaryColor;
+
+   .container {
+      @extend %container;
+   }
+
+   &__inner {
+      //height: 760px;
+   }
+
+   &__title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+      margin-bottom: 14px;
+
+      @include text(28px, 400, 34px, $textColor);
+      //text-align: center;
+      //Vertical align: Top;
+   }
+}
