@@ -3,4 +3,16 @@
    &__text {
       margin-bottom: 30px;
    }
+
+
+
+   &__cup {
+      padding-right: 15px;
+   }
+
+   &__rating {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+   }
 }

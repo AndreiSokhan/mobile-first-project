@@ -581,6 +581,15 @@ template {
     background-color: #fff;
 }
 
+.photoset__inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
 .photoset__title {
     display: -ms-flexbox;
     display: flex;
@@ -594,4 +603,12 @@ template {
     font-weight: 400;
     line-height: 34px;
     color: #37373F;
+}
+
+.photoset__video {
+    margin-bottom: 30px;
+}
+
+.description__text {
+    margin-bottom: 30px;
 }

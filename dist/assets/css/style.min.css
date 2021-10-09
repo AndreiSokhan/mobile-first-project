@@ -479,4 +479,12 @@ template {
 .description__text {
   margin-bottom: 30px; }
 
+.description__cup {
+  padding-right: 15px; }
+
+.description__rating {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+
 /*# sourceMappingURL=style.min.css.map */
