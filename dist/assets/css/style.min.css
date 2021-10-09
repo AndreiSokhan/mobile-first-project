@@ -459,6 +459,10 @@ template {
 
 .photoset {
   background-color: #fff; }
+  .photoset__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
   .photoset__title {
     display: flex;
     align-items: center;
@@ -469,5 +473,10 @@ template {
     font-weight: 400;
     line-height: 34px;
     color: #37373F; }
+  .photoset__video {
+    margin-bottom: 30px; }
+
+.description__text {
+  margin-bottom: 30px; }
 
 /*# sourceMappingURL=style.min.css.map */

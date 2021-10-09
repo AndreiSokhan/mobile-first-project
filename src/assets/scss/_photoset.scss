@@ -6,7 +6,9 @@
    }
 
    &__inner {
-      //height: 760px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
    }
 
    &__title {
@@ -20,4 +22,10 @@
       //text-align: center;
       //Vertical align: Top;
    }
+
+   &__video {
+      margin-bottom: 30px;
+   }
+
+   
 }
