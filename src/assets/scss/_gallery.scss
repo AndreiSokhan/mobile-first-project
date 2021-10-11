@@ -1,0 +1,65 @@
+.gallery {
+   background-color: $primaryColor;
+
+   .container {
+      @extend %container;
+   }
+
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 74px;
+   }
+
+   &__title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 32px;
+      @include text(28px, 400, 34px, $textColor);
+   }
+
+   &__example {
+   display: flex;
+   overflow: auto;
+   margin-bottom: 45px;
+   }
+
+   &__reference {
+      margin-right: 15px;
+      max-height: 185px;
+      max-width: 276px;
+      width: 100%;
+      object-fit: cover;
+   }
+
+   &__link {
+      margin: 0 auto;
+      @include text(17px, 500, 25px, $linkColor);
+      position: relative;
+      display: none;
+      &::before {
+         content :"";
+         background-image: url(./../images/Arrow.svg);
+         display: block;
+         background-repeat: no-repeat;
+         height: 6px;
+         width: 11px;
+         position: absolute;
+         top: 9px;
+         left: -20px;
+      }
+      &::after {
+         content :"";
+         background-image: url(./../images/Arrow.svg);
+         display: block;
+         background-repeat: no-repeat;
+         height: 6px;
+         width: 11px;
+         position: absolute;
+         top: 9px;
+         right: -20px;
+      }
+   }
+}

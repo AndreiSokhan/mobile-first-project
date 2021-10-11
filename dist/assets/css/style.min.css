@@ -1,15 +1,15 @@
-.header .container, .main .container, .photoset .container {
+.header .container, .main .container, .photoset .container, .gallery .container {
   padding: 0 15px;
   width: 100%;
   max-width: 1140px; }
   @media screen and (min-width: 576px) {
-    .header .container, .main .container, .photoset .container {
+    .header .container, .main .container, .photoset .container, .gallery .container {
       padding: 0 35px; } }
   @media screen and (min-width: 768px) {
-    .header .container, .main .container, .photoset .container {
+    .header .container, .main .container, .photoset .container, .gallery .container {
       padding: 0 50px; } }
   @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .photoset .container {
+    .header .container, .main .container, .photoset .container, .gallery .container {
       padding: 0; } }
 
 *,
@@ -477,6 +477,9 @@ template {
     line-height: 34px;
     color: #37373F; }
   .photoset__video {
+    max-width: 668px;
+    width: 100%;
+    object-fit: cover;
     margin-bottom: 30px; }
 
 .description__text {
@@ -531,5 +534,60 @@ template {
   font-weight: 400;
   line-height: 20px;
   color: #37373F; }
+
+.gallery {
+  background-color: #fff; }
+  .gallery__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 74px; }
+  .gallery__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #37373F; }
+  .gallery__example {
+    display: flex;
+    overflow: auto;
+    margin-bottom: 45px; }
+  .gallery__reference {
+    margin-right: 15px;
+    max-height: 185px;
+    max-width: 276px;
+    width: 100%;
+    object-fit: cover; }
+  .gallery__link {
+    margin: 0 auto;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 25px;
+    color: #5286EC;
+    position: relative;
+    display: none; }
+    .gallery__link::before {
+      content: "";
+      background-image: url(./../images/Arrow.svg);
+      display: block;
+      background-repeat: no-repeat;
+      height: 6px;
+      width: 11px;
+      position: absolute;
+      top: 9px;
+      left: -20px; }
+    .gallery__link::after {
+      content: "";
+      background-image: url(./../images/Arrow.svg);
+      display: block;
+      background-repeat: no-repeat;
+      height: 6px;
+      width: 11px;
+      position: absolute;
+      top: 9px;
+      right: -20px; }
 
 /*# sourceMappingURL=style.min.css.map */
