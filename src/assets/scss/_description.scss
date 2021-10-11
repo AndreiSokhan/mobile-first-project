@@ -1,18 +1,55 @@
 .description {
 
    &__text {
+      @include text(14px, 400, 20px, $textColor);
       margin-bottom: 30px;
    }
 
+   &__list {
+      padding-bottom: 30px;
+   }
 
+   &__item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 22px;
+      @include text(14px, 500, 20px, $textColor);
+   }
+
+   &__image {
+      padding-right: 10px;
+   }
 
    &__cup {
-      padding-right: 15px;
+      padding-right: 12px;
    }
 
    &__rating {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      position: relative;
+      &::before {
+         content: "";
+         height: 1px;
+         width: 290px;
+         background: $secondaryColor;
+         display: block;
+         position: absolute;
+         top: -14px;
+      }
+      &::after {
+         content: "";
+         height: 1px;
+         width: 290px;
+         background: $secondaryColor;
+         display: block;
+         position: absolute;
+         bottom: -14px;
+      }
+   }
+
+   &__text-rating {
+      @include text(14px, 400, 20px, $textColor);
    }
 }

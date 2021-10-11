@@ -612,3 +612,16 @@ template {
 .description__text {
     margin-bottom: 30px;
 }
+
+.description__cup {
+    padding-right: 15px;
+}
+
+.description__rating {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
