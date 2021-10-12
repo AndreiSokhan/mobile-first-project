@@ -1,23 +1,23 @@
-.header .container, .main .container, .photoset .container, .gallery .container {
+.header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container {
     padding: 0 15px;
     width: 100%;
     max-width: 1140px;
 }
 
 @media screen and (min-width: 576px) {
-    .header .container, .main .container, .photoset .container, .gallery .container {
+    .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container {
         padding: 0 35px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .header .container, .main .container, .photoset .container, .gallery .container {
+    .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container {
         padding: 0 50px;
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .photoset .container, .gallery .container {
+    .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container {
         padding: 0;
     }
 }
@@ -597,12 +597,7 @@ template {
 }
 
 .photoset__title {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    text-align: center;
     margin-top: 40px;
     margin-bottom: 14px;
     font-size: 28px;
@@ -620,6 +615,7 @@ template {
 }
 
 .description__text {
+    max-width: 430px;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -734,6 +730,7 @@ template {
 
 .gallery__link {
     margin: 0 auto;
+    margin-bottom: 83px;
     font-size: 17px;
     font-weight: 500;
     line-height: 25px;
@@ -755,6 +752,119 @@ template {
 }
 
 .gallery__link::after {
+    content: "";
+    background-image: url(./../images/Arrow.svg);
+    display: block;
+    background-repeat: no-repeat;
+    height: 6px;
+    width: 11px;
+    position: absolute;
+    top: 9px;
+    right: -20px;
+}
+
+@media screen and (min-width: 768px) {
+    .gallery__link {
+        display: block;
+    }
+}
+
+.organizer__card {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.organizer__name {
+    margin-bottom: 7px;
+    max-width: 200px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #37373F;
+}
+
+.organizer__photographer {
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #37373F;
+}
+
+.organizer__link {
+    max-width: 200px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #5286EC;
+    margin-bottom: 25px;
+}
+
+.organizer__photo-link {
+    margin-bottom: 23px;
+    position: relative;
+}
+
+.organizer__photo-link::before {
+    content: "";
+    height: 1px;
+    width: 668px;
+    background: #C7C7C7;
+    display: none;
+    position: absolute;
+    top: -56px;
+    left: -265px;
+}
+
+@media screen and (min-width: 768px) {
+    .organizer__photo-link::before {
+        display: block;
+    }
+}
+
+.organizer__photo-link::after {
+    content: "";
+    background-image: url(./../images/heart.svg);
+    display: block;
+    background-repeat: no-repeat;
+    height: 27px;
+    width: 31px;
+    position: absolute;
+    left: 186px;
+    top: -27px;
+}
+
+.organizer__subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #37373F;
+    margin-bottom: 14px;
+}
+
+.organizer__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #37373F;
+}
+
+.organizer__link-text {
+    margin: 22px 0 30px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23px;
+    color: #5286EC;
+    position: relative;
+}
+
+.organizer__link-text::after {
     content: "";
     background-image: url(./../images/Arrow.svg);
     display: block;

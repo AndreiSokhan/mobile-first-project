@@ -1,15 +1,15 @@
-.header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container {
+.header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container, .shooting .container {
   padding: 0 15px;
   width: 100%;
   max-width: 1140px; }
   @media screen and (min-width: 576px) {
-    .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container {
+    .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container, .shooting .container {
       padding: 0 35px; } }
   @media screen and (min-width: 768px) {
-    .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container {
+    .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container, .shooting .container {
       padding: 0 50px; } }
   @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container {
+    .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container, .shooting .container {
       padding: 0; } }
 
 *,
@@ -542,9 +542,7 @@ template {
     justify-content: center;
     padding-top: 74px; }
   .gallery__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     margin-bottom: 32px;
     font-size: 28px;
     font-weight: 400;
@@ -679,5 +677,118 @@ template {
     position: absolute;
     top: 9px;
     right: -20px; }
+
+.shooting__title {
+  padding-top: 10px;
+  margin-bottom: 61px;
+  max-width: 276px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #37373F; }
+
+.shooting__day {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #37373F;
+  margin-bottom: 16px;
+  position: relative; }
+  .shooting__day::before {
+    content: "";
+    height: 1px;
+    width: 290px;
+    background: #C7C7C7;
+    display: block;
+    position: absolute;
+    top: -20px; }
+  .shooting__day::after {
+    content: "";
+    height: 1px;
+    width: 290px;
+    background: #C7C7C7;
+    display: block;
+    position: absolute;
+    bottom: -16px; }
+
+.shooting__img {
+  display: none; }
+
+.shooting__time {
+  padding: 30px 0 30px 20px;
+  position: relative; }
+  .shooting__time::after {
+    content: "";
+    height: 1px;
+    width: 290px;
+    background: #C7C7C7;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px; }
+
+.shooting__free-time {
+  display: flex;
+  flex-direction: column; }
+
+.shooting__period {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #37373F; }
+
+.shooting__price {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #37373F; }
+
+.shooting__place {
+  margin-bottom: 20px; }
+
+.shooting__btn {
+  width: 130px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #FC9B09;
+  background-color: transparent;
+  border: solid #FC9B09 2px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px; }
+
+.shooting__cup {
+  padding-right: 12px; }
+
+.shooting__rating {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative; }
+  .shooting__rating::after {
+    content: "";
+    height: 1px;
+    width: 290px;
+    background: #C7C7C7;
+    display: block;
+    position: absolute;
+    bottom: -14px; }
+
+.shooting__text-rating {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #37373F; }
 
 /*# sourceMappingURL=style.min.css.map */
