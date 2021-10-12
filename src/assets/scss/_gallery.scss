@@ -36,6 +36,7 @@
 
    &__link {
       margin: 0 auto;
+      margin-bottom: 83px;
       @include text(17px, 500, 25px, $linkColor);
       position: relative;
       display: none;
@@ -60,6 +61,9 @@
          position: absolute;
          top: 9px;
          right: -20px;
+      }
+      @media screen and (min-width: 768px) {
+         display: block;
       }
    }
 }

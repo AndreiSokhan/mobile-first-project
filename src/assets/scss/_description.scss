@@ -1,6 +1,11 @@
 .description {
 
+   .container {
+      @extend %container;
+   }
+
    &__text {
+      max-width: 430px;
       @include text(14px, 400, 20px, $textColor);
       margin-bottom: 30px;
    }
