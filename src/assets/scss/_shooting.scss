@@ -17,6 +17,7 @@
    &__day {
       text-align: center;
       @include text(18px, 500, 26px, $textColor);
+      padding-top: 20px;
       margin-bottom: 16px;
       position: relative;
       &::before {
@@ -26,7 +27,7 @@
          background: $secondaryColor;
          display: block;
          position: absolute;
-         top: -20px;
+         top: 0;
       }
       &::after {
          content: "";
@@ -60,7 +61,8 @@
 
    &__free-time {
       display: flex;
-      flex-direction: column
+      flex-direction: column;
+      margin-bottom: 20px;
    }
 
    &__period {
@@ -74,7 +76,7 @@
    }
 
    &__place {
-      margin-bottom: 20px;
+
    }
 
    &__btn {
@@ -98,6 +100,7 @@
    }
 
    &__rating {
+      padding: 32px 0 29px 20px;
       display: flex;
       align-items: center;
       flex-wrap: wrap;
@@ -109,7 +112,8 @@
          background: $secondaryColor;
          display: block;
          position: absolute;
-         bottom: -14px;
+         bottom: 0;
+         left: 0;
       }
    }
 

@@ -1,0 +1,26 @@
+.reviews {
+   .container {
+      @extend %container;
+   }
+
+   &__inner {}
+
+   &__title {
+      //padding-top: 10px;
+      margin-bottom: 50px;
+      max-width: 276px;
+      text-align: center;
+      @include text(26px, 400, 32px, $textColor);
+   }
+
+   &__personal {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      //flex-direction: column;
+   }
+
+   &__name {
+      display: block;
+   }
+}
