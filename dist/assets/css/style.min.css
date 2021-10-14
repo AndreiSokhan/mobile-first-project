@@ -808,9 +808,54 @@ template {
 .reviews__personal {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  margin-bottom: 24px; }
+
+.reviews__personal-photo {
+  margin-right: 18px; }
 
 .reviews__name {
-  display: block; }
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.5px;
+  color: #37373F; }
+
+.reviews__profession {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #37373F; }
+
+.reviews__autor {
+  margin-bottom: 14px;
+  padding-left: 21px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #B3B3B3;
+  position: relative; }
+  .reviews__autor::before {
+    content: "";
+    background-image: url(./../images/check-green.svg);
+    display: block;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 1px;
+    left: 0; }
+
+.reviews__answer {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #37373F; }
+
+.reviews__date {
+  margin-bottom: 65px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #B3B3B3; }
 
 /*# sourceMappingURL=style.min.css.map */

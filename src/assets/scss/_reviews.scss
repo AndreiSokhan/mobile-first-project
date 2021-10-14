@@ -16,11 +16,55 @@
    &__personal {
       display: flex;
       align-items: center;
-      justify-content: center;
-      //flex-direction: column;
+      margin-bottom: 24px;
+   }
+
+   &__personal-photo {
+      margin-right: 18px;
+   }
+
+   &__individual {
+      //display: flex;
+      //justify-content: space-around;
    }
 
    &__name {
-      display: block;
+      @include text(16px, 500, 19.5px, $textColor);
    }
+
+   &__profession {
+      @include text(14px, 400, 21px, $textColor);
+   }
+
+   &__autor {
+      margin-bottom: 14px;
+      padding-left: 21px;
+      @include text(14px, 400, 21px, $textColorLight);
+      position: relative;
+      &::before {
+         content: "";
+         background-image: url(./../images/check-green.svg);
+         display: block;
+         background-repeat: no-repeat;
+         height: 20px;
+         width: 20px;
+         position: absolute;
+         top: 1px;
+         left: 0;
+      }
+   }
+
+   &__answer {
+      margin-bottom: 20px;
+      @include text(14px, 400, 21px, $textColor);
+   }
+   &__date {
+      margin-bottom: 65px;
+      @include text(14px, 400, 21px, $textColorLight);
+   }
+
+
+
+
+
 }
