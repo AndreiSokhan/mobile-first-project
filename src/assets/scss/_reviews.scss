@@ -8,9 +8,22 @@
    &__title {
       //padding-top: 10px;
       margin-bottom: 50px;
-      max-width: 276px;
       text-align: center;
       @include text(26px, 400, 32px, $textColor);
+   }
+
+   &__card {
+      position: relative;
+      &::after {
+         content: "";
+         height: 1px;
+         width: 290px;
+         background: $secondaryColor;
+         display: block;
+         position: absolute;
+         bottom: -44px;
+         left: 0px;
+      }
    }
 
    &__personal {
@@ -23,16 +36,13 @@
       margin-right: 18px;
    }
 
-   &__individual {
-      //display: flex;
-      //justify-content: space-around;
-   }
-
    &__name {
       @include text(16px, 500, 19.5px, $textColor);
    }
 
    &__profession {
+      margin-top: 6px;
+      margin-bottom: 7px;
       @include text(14px, 400, 21px, $textColor);
    }
 
@@ -55,16 +65,78 @@
    }
 
    &__answer {
+      max-width: 510px;
       margin-bottom: 20px;
       @include text(14px, 400, 21px, $textColor);
    }
    &__date {
-      margin-bottom: 65px;
+      margin-bottom: 70px;
       @include text(14px, 400, 21px, $textColorLight);
    }
 
+   &__card-last {
+      display: none;
+      position: relative;
+      &::after {
+         content: "";
+         height: 1px;
+         width: 290px;
+         background: $secondaryColor;
+         display: block;
+         position: absolute;
+         bottom: -44px;
+         left: 0px;
+      }
+   }
 
+   &__name-last {
+      margin-bottom: 20px;
+   }
 
+   &__link {
+      margin-bottom: 87px;
+      text-align: center;
+      @include text(17px, 500, 25px, $linkColor);
+      position: relative;
+      &::after {
+         content: "";
+         background-image: url(./../images/Arrow-right.svg);
+         display: block;
+         background-repeat: no-repeat;
+         height: 11px;
+         width: 6px;
+         position: absolute;
+         right: -11px;
+         bottom: 7px;
+      }
+   }
 
+&__contacts {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 28px;
+   position: relative;
+   &::after {
+      content: "";
+      height: 1px;
+      width: 320px;
+      background: $secondaryColor;
+      display: block;
+      position: absolute;
+      bottom: -28px;
+      left: -15px;
+   }
+}
+
+&__list {
+   display: flex;
+   align-items: center;
+}
+
+&__link-social-facebook {
+   margin-right: 30px;
+   margin-left: 30px;
+}
 
 }

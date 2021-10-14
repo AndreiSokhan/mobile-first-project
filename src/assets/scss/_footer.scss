@@ -1,0 +1,28 @@
+.footer{
+
+   .container {
+      @extend %container;
+   }
+
+   &__pay {
+      padding: 26px 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__card-mc {
+      margin-right: 17px;
+   }
+
+   &__phone-link {
+      display: block;
+      margin-bottom: 10px;
+      @include text(14px, 400, 17px, $textColorLight);
+   }
+
+   &__signature {
+      margin-bottom: 20px;
+      @include text(14px, 400, 17px, $textColorLight);
+   }
+}

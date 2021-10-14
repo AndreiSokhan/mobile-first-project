@@ -71,6 +71,12 @@
    }
 
    &__text {
+      max-width: 584px;
+      @include text(16px, 400, 24px, $textColor);
+   }
+
+   &__offer {
+      max-width: 584px;
       @include text(16px, 400, 24px, $textColor);
    }
 
