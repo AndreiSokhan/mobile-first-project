@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container, .shooting .container, .reviews .container, .footer .container {
   padding: 0 15px;
   width: 100%;
@@ -475,6 +476,7 @@ template {
     line-height: 34px;
     color: #37373F; }
   .photoset__video {
+    max-height: 467px;
     max-width: 668px;
     width: 100%;
     object-fit: cover;
@@ -551,7 +553,7 @@ template {
   .gallery__example {
     display: flex;
     overflow: auto;
-    margin-bottom: 45px; }
+    margin-bottom: 64px; }
   .gallery__reference {
     margin-right: 15px;
     max-height: 185px;
@@ -804,6 +806,29 @@ template {
   padding-top: 45px;
   padding-bottom: 52px; }
 
+/* Слайдер */
+/* Слайдер запущен */
+/* Слайдер с точками */
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow-wrap: hidden; }
+
+/* Лента слайдов */
+.slick-track {
+  display: flex; }
+
+/* Слайд */
+/* Слайд активный (показывается) */
+/* Слайд основной */
+/* Слайд по центру */
+/* Клонированный слайд */
+/* Стрелка */
+/* Стрелка влево */
+/* Стрелка вправо */
+/* Стрелка не активная */
+/* Точки (булиты) */
+/* Активная точка */
+/* Элемент точки */
 .reviews__title {
   margin-bottom: 50px;
   text-align: center;

@@ -16,7 +16,7 @@ body {
 }
 
 @import "./base/normalize";
-@import "./header";
+@import "./layout/header";
 @import "./main-block";
 @import "./photoset";
 @import "./description";
@@ -24,6 +24,6 @@ body {
 @import "./organizer";
 @import "./shooting";
 @import "./map";
-@import "./result";
+@import "./slider";
 @import "./reviews";
-@import "./footer";
+@import "./layout/footer";
