@@ -712,7 +712,7 @@ template {
     display: -ms-flexbox;
     display: flex;
     overflow: auto;
-    margin-bottom: 45px;
+    margin-bottom: 64px;
 }
 
 .gallery__reference {

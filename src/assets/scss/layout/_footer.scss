@@ -15,6 +15,23 @@
       margin-right: 17px;
    }
 
+   &__language {
+      padding-right: 17px;
+      @include text(15px, 400, 18px, $textColor);
+      position: relative;
+      &::after {
+         content: "";
+         background-image: url(./../images/Arrow.svg);
+         display: block;
+         background-repeat: no-repeat;
+         height: 6px;
+         width: 11px;
+         position: absolute;
+         right: 0;
+         bottom: 6px;
+      }
+   }
+
    &__phone-link {
       display: block;
       margin-bottom: 10px;
