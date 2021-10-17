@@ -10,7 +10,6 @@ $breakpoints: (
    sm: 576px,
    md: 768px,
    lg: 1280px,
-   xl: 1440px,
 );
 
 %container {
@@ -27,6 +26,7 @@ $breakpoints: (
    }
    
    @media screen and (min-width: 1280px) {
-      padding: 0 ;
+      padding: 0;
+      margin: 0 auto;
    }
 }

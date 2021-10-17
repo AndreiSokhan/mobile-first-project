@@ -1,24 +1,25 @@
-.header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container, .shooting .container, .reviews .container, .footer .container {
+.header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container, .shooting .container, .slider .container, .reviews .container, .footer .container {
     padding: 0 15px;
     width: 100%;
     max-width: 1140px;
 }
 
 @media screen and (min-width: 576px) {
-    .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container, .shooting .container, .reviews .container, .footer .container {
+    .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container, .shooting .container, .slider .container, .reviews .container, .footer .container {
         padding: 0 35px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container, .shooting .container, .reviews .container, .footer .container {
+    .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container, .shooting .container, .slider .container, .reviews .container, .footer .container {
         padding: 0 50px;
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container, .shooting .container, .reviews .container, .footer .container {
+    .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container, .shooting .container, .slider .container, .reviews .container, .footer .container {
         padding: 0;
+        margin: auto;
     }
 }
 
@@ -1206,6 +1207,27 @@ template {
 
 .footer__card-mc {
     margin-right: 17px;
+}
+
+.footer__language {
+    padding-right: 17px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #37373F;
+    position: relative;
+}
+
+.footer__language::after {
+    content: "";
+    background-image: url(./../images/Arrow.svg);
+    display: block;
+    background-repeat: no-repeat;
+    height: 6px;
+    width: 11px;
+    position: absolute;
+    right: 0;
+    bottom: 6px;
 }
 
 .footer__phone-link {

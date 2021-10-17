@@ -1,8 +1,17 @@
 .main {
    background-image: url(./../images/main-bg.jpg);
+   background-repeat: no-repeat;
    color: $primaryColor;
    background-size: cover;
-   background-position-x: 62%;
+   background-position: 62% -5px;
+   @media screen and (min-width: 576px) {
+      background-position: 30%;
+      background-repeat: no-repeat;
+   }
+   @media screen and (min-width: 768px) {
+      background-position: 0;
+      background-repeat: no-repeat;
+   }
 
    .container {
       @extend %container;
@@ -13,7 +22,6 @@
       flex-direction: column;
       justify-content: center;
       height: 655px;
-
       @media screen and (min-width: 768px) {
          height: 840px;
       }
@@ -22,13 +30,18 @@
    &__title {
       @include text(32px, 700, 39px, $primaryColor);
       max-width: 247px;
-      margin-top: -6px;
+      margin: -18px 0 0;
+      @media screen and (min-width: 768px) {
+         max-width: 500px;
+      }
+      @media screen and (min-width: 1280px) {
+         max-width: 700px;
+      }
 
       span {
          color: $accentColor;
       }
    }
-
    &__price-box {
       height: 93px;
       width: 208px;
@@ -51,8 +64,13 @@
    }
 
    &__price {
-      @include text(30px, 800, inherit, inherit);
-   }
+      @includetext(30px,800,inherit,inherit):;
+      transform: translate(0, 4px);
+      -webkit-transform: translate(0, 4px);
+      -moz-transform: translate(0, 4px);
+      -ms-transform: translate(0, 4px);
+      -o-transform: translate(0, 4px);
+}
 
    &__percent {
       border-radius: 50%;
