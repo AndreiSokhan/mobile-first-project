@@ -628,6 +628,14 @@ template {
     font-weight: 400;
     line-height: 34px;
     color: #37373F; }
+    @media screen and (min-width: 768px) {
+      .gallery__title {
+        text-align: left;
+        margin: 0 0 30px 0;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 29px;
+        color: #37373F; } }
   .gallery__example {
     display: flex;
     overflow: auto;
@@ -670,6 +678,12 @@ template {
     @media screen and (min-width: 768px) {
       .gallery__link {
         display: block; } }
+
+@media screen and (min-width: 1280px) {
+  .organizer__inner {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start; } }
 
 .organizer__card {
   display: flex;
@@ -716,6 +730,10 @@ template {
     @media screen and (min-width: 768px) {
       .organizer__photo-link::before {
         display: block; } }
+    @media screen and (min-width: 1280px) {
+      .organizer__photo-link::before {
+        width: 1140px;
+        left: -840px; } }
   .organizer__photo-link::after {
     content: "";
     background-image: url(./../images/heart.svg);
@@ -726,6 +744,10 @@ template {
     position: absolute;
     left: 186px;
     top: -27px; }
+
+@media screen and (min-width: 1280px) {
+  .organizer__about {
+    margin-right: 226px; } }
 
 .organizer__subtitle {
   font-size: 18px;

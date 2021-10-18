@@ -18,12 +18,18 @@
       margin: 0 auto;
       margin-bottom: 32px;
       @include text(28px, 400, 34px, $textColor);
+
+      @media screen and (min-width: 768px) {
+         text-align: left;
+         margin: 0 0 30px 0; 
+         @include text(20px, 500, 29px, $textColor);
+      }
    }
 
    &__example {
-   display: flex;
-   overflow: auto;
-   margin-bottom: 64px;
+      display: flex;
+      overflow: auto;
+      margin-bottom: 64px;
    }
 
    &__reference {
@@ -40,8 +46,9 @@
       @include text(17px, 500, 25px, $linkColor);
       position: relative;
       display: none;
+
       &::before {
-         content :"";
+         content: "";
          background-image: url(./../images/Arrow.svg);
          display: block;
          background-repeat: no-repeat;
@@ -50,9 +57,11 @@
          position: absolute;
          top: 9px;
          left: -20px;
+         
       }
+
       &::after {
-         content :"";
+         content: "";
          background-image: url(./../images/Arrow.svg);
          display: block;
          background-repeat: no-repeat;
@@ -62,6 +71,7 @@
          top: 9px;
          right: -20px;
       }
+
       @media screen and (min-width: 768px) {
          display: block;
       }
