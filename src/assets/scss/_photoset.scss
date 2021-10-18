@@ -12,19 +12,37 @@
    }
 
    &__title {
-      text-align: center;
+      width: 190px;
+      margin: 0 auto;
       margin-top: 40px;
       margin-bottom: 14px;
       @include text(28px, 400, 34px, $textColor);
+      @media screen and (min-width: 768px) {
+         width: 260px;
+         @include text(40px, 500, 49px, $textColor);
+      }
    }
 
    &__video {
-      max-height: 467px;
-      max-width: 668px;
+      max-height: 197px;
+      max-width: 290px;
       width: 100%;
       object-fit: cover;
       margin-bottom: 30px;
+      @media screen and (min-width: 576px) {
+         max-height: 340px;
+         max-width: 506px;
+      }
+      @media screen and (min-width: 768px) {
+         max-height: 437px;
+         max-width: 668px;
+      }
+      @media screen and (min-width: 1280px) {
+         max-height: 374px;
+         max-width: 554px;
+      }
    }
+   
 
    
 }

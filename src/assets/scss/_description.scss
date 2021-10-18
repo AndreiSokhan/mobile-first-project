@@ -8,6 +8,11 @@
       max-width: 430px;
       @include text(14px, 400, 20px, $textColor);
       margin-bottom: 30px;
+
+      @media screen and (min-width: 576px) {
+         max-width: 506px;
+         @include text(18px, 400, 26px, $textColor);
+      }
    }
 
    &__list {
@@ -29,11 +34,24 @@
       padding-right: 12px;
    }
 
-   &__rating {
+   &__feedback {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      @media screen and (min-width: 576px) {
+         display: flex;
+         align-items: center;
+      }
+   }
+
+   &__text-rating {
+      margin-right: 14px;
+   }
+
+   &__rating {
       position: relative;
+      display: flex;
+      align-items: center;
       &::before {
          content: "";
          height: 1px;
@@ -42,7 +60,17 @@
          display: block;
          position: absolute;
          top: -14px;
+         @media screen and (min-width: 576px) {
+            width: 506px;
+         }
+         @media screen and (min-width: 768px) {
+            width: 666px;
+         }
+         @media screen and (min-width: 1280px) {
+            width: 569px;
+         }
       }
+
       &::after {
          content: "";
          height: 1px;
@@ -51,6 +79,15 @@
          display: block;
          position: absolute;
          bottom: -14px;
+         @media screen and (min-width: 576px) {
+            width: 506px;
+         }
+         @media screen and (min-width: 768px) {
+            width: 666px;
+         }
+         @media screen and (min-width: 1280px) {
+            width: 569px;
+         }
       }
    }
 

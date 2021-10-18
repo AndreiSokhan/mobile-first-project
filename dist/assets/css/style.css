@@ -19,7 +19,7 @@
 @media screen and (min-width: 1280px) {
     .header .container, .main .container, .photoset .container, .description .container, .gallery .container, .organizer .container, .shooting .container, .slider .container, .reviews .container, .footer .container {
         padding: 0;
-        margin: auto;
+        margin: 0 auto;
     }
 }
 
@@ -489,9 +489,24 @@ template {
 
 .main {
     background-image: url(./../images/main-bg.jpg);
+    background-repeat: no-repeat;
     color: #fff;
     background-size: cover;
-    background-position-x: 62%;
+    background-position: 62% -5px;
+}
+
+@media screen and (min-width: 576px) {
+    .main {
+        background-position: 30%;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        background-position: 0;
+        background-repeat: no-repeat;
+    }
 }
 
 .main__inner {
@@ -516,7 +531,19 @@ template {
     line-height: 39px;
     color: #fff;
     max-width: 247px;
-    margin-top: -6px;
+    margin: -18px 0 0;
+}
+
+@media screen and (min-width: 768px) {
+    .main__title {
+        max-width: 500px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .main__title {
+        max-width: 700px;
+    }
 }
 
 .main__title span {
@@ -552,10 +579,12 @@ template {
 }
 
 .main__price {
-    font-size: 30px;
-    font-weight: 800;
-    line-height: inherit;
-    color: inherit;
+    @includetext (30px,800,inherit,inherit):;
+    transform: translate(0, 4px);
+    -webkit-transform: translate(0, 4px);
+    -moz-transform: translate(0, 4px);
+    -ms-transform: translate(0, 4px);
+    -o-transform: translate(0, 4px);
 }
 
 .main__percent {

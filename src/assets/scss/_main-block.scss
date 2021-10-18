@@ -8,7 +8,7 @@
       background-position: 30%;
       background-repeat: no-repeat;
    }
-   @media screen and (min-width: 768px) {
+   @media screen and (min-width: 769px) {
       background-position: 0;
       background-repeat: no-repeat;
    }
@@ -64,7 +64,7 @@
    }
 
    &__price {
-      @includetext(30px,800,inherit,inherit):;
+      @include text(30px,800,inherit,inherit);
       transform: translate(0, 4px);
       -webkit-transform: translate(0, 4px);
       -moz-transform: translate(0, 4px);

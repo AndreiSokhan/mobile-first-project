@@ -13,7 +13,9 @@
    }
 
    &__title {
+      width: 280px;
       text-align: center;
+      margin: 0 auto;
       margin-bottom: 32px;
       @include text(28px, 400, 34px, $textColor);
    }
