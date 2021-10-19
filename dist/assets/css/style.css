@@ -1049,15 +1049,60 @@ template {
     right: -20px;
 }
 
+@media screen and (min-width: 576px) {
+    .organizer__link-text {
+        margin-bottom: 73px;
+    }
+}
+
 .shooting__title {
-    padding-top: 10px;
-    margin-bottom: 61px;
-    max-width: 276px;
+    width: 276px;
     text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
     font-size: 26px;
     font-weight: 400;
     line-height: 32px;
     color: #37373F;
+    position: relative;
+}
+
+.shooting__title::before {
+    content: "";
+    height: 1px;
+    width: 290px;
+    background: #C7C7C7;
+    display: none;
+    position: absolute;
+    top: -21px;
+}
+
+@media screen and (min-width: 576px) {
+    .shooting__title::before {
+        display: block;
+        width: 506px;
+        left: -111px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .shooting__title {
+        text-align: left;
+        margin: 0 0 30px 0;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 29px;
+        color: #37373F;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .shooting__date {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+    }
 }
 
 .shooting__day {
@@ -1067,8 +1112,15 @@ template {
     line-height: 26px;
     color: #37373F;
     padding-top: 20px;
-    margin-bottom: 16px;
+    margin: 0 14px 16px 0;
     position: relative;
+}
+
+@media screen and (min-width: 576px) {
+    .shooting__day {
+        text-align: left;
+        padding-left: 20px;
+    }
 }
 
 .shooting__day::before {
@@ -1081,6 +1133,13 @@ template {
     top: 0;
 }
 
+@media screen and (min-width: 576px) {
+    .shooting__day::before {
+        width: 506px;
+        left: 0;
+    }
+}
+
 .shooting__day::after {
     content: "";
     height: 1px;
@@ -1091,13 +1150,43 @@ template {
     bottom: -16px;
 }
 
+@media screen and (min-width: 576px) {
+    .shooting__day::after {
+        width: 506px;
+        left: 0;
+    }
+}
+
 .shooting__img {
     display: none;
 }
 
+@media screen and (min-width: 576px) {
+    .shooting__img {
+        display: block;
+    }
+}
+
 .shooting__time {
-    padding: 30px 0 30px 20px;
+    padding: 30px 20px 30px 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
     position: relative;
+}
+
+@media screen and (min-width: 576px) {
+    .shooting__time {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-align: center;
+        align-items: center;
+    }
 }
 
 .shooting__time::after {
@@ -1109,6 +1198,12 @@ template {
     position: absolute;
     bottom: 0px;
     left: 0px;
+}
+
+@media screen and (min-width: 576px) {
+    .shooting__time::after {
+        width: 506px;
+    }
 }
 
 .shooting__free-time {
@@ -1167,8 +1262,6 @@ template {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     position: relative;
 }
 
@@ -1181,6 +1274,27 @@ template {
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+@media screen and (min-width: 576px) {
+    .shooting__rating::after {
+        width: 506px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .shooting__feedback {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .shooting__text-rating {
+        margin-right: 14px;
+    }
 }
 
 .shooting__text-rating {
@@ -1217,6 +1331,12 @@ template {
     position: absolute;
     bottom: -44px;
     left: 0px;
+}
+
+@media screen and (min-width: 576px) {
+    .reviews__card::after {
+        width: 506px;
+    }
 }
 
 .reviews__personal {
@@ -1291,6 +1411,12 @@ template {
     position: relative;
 }
 
+@media screen and (min-width: 576px) {
+    .reviews__card-last {
+        display: block;
+    }
+}
+
 .reviews__card-last::after {
     content: "";
     height: 1px;
@@ -1300,6 +1426,12 @@ template {
     position: absolute;
     bottom: -44px;
     left: 0px;
+}
+
+@media screen and (min-width: 576px) {
+    .reviews__card-last::after {
+        width: 506px;
+    }
 }
 
 .reviews__name-last {

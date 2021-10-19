@@ -1,7 +1,10 @@
 "use strict";
 
 // Подключаем модули
-const {src, dest} = require('gulp');
+const {
+    src,
+    dest
+} = require('gulp');
 const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps'); // благодаря ему в браузере видим не минифицированный код, а привычную разметку
 const autoprefixer = require('gulp-autoprefixer'); // расставляет префиксы для поддержки свойств в разных браузерах
@@ -26,37 +29,37 @@ const distPath = 'dist/';
 const path = {
     // Исходные файлы. С этими файлами мы будем работать 
     src: {
-        html:   srcPath + "*.html",
-        js:     srcPath + "assets/js/*.js",
-        css:    srcPath + "assets/scss/**/*.scss",
+        html: srcPath + "*.html",
+        js: srcPath + "assets/js/*.js",
+        css: srcPath + "assets/scss/**/*.scss",
         images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
-        fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
+        fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
     // В эти папки будут собираться файлы 
     build: {
-        html:   distPath,
-        js:     distPath + "assets/js/",
-        css:    distPath + "assets/css/",
+        html: distPath,
+        js: distPath + "assets/js/",
+        css: distPath + "assets/css/",
         images: distPath + "assets/images/",
-        fonts:  distPath + "assets/fonts/"
+        fonts: distPath + "assets/fonts/"
     },
     // За этими файлами мы будем следить. При изменении этих файлов бдет перезагружаться браузер
     watch: {
-        html:   srcPath + "**/*.html",
-        js:     srcPath + "assets/js/**/*.js",
-        css:    srcPath + "assets/scss/**/*.scss",
+        html: srcPath + "**/*.html",
+        js: srcPath + "assets/js/**/*.js",
+        css: srcPath + "assets/scss/**/*.scss",
         images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
-        fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
+        fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
     clean: "./" + distPath
 }
 
 // Если нужно выполнять преобразование файлов в определенном порядке, то используем массив с нужным нам порядком:
 const jsFiles = [
+    srcPath + 'assets/js/slick.min.js',
     srcPath + 'assets/js/lib.js',
     srcPath + 'assets/js/main.js'
 ]
-
 
 // TASKS
 // объявляем функции под сборки (все пути относительные)
@@ -72,11 +75,15 @@ function serve() {
 
 // HTML 
 function html(cb) {
-    return src(path.src.html, {base: srcPath}) 
-         //.pipe() - Это 1 конкретное действие, которое мы хотим совершить над нашими файлами.
+    return src(path.src.html, {
+            base: srcPath
+        })
+        //.pipe() - Это 1 конкретное действие, которое мы хотим совершить над нашими файлами.
         .pipe(plumber())
         .pipe(dest(path.build.html))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 
     cb();
 }
@@ -86,10 +93,10 @@ function css(cb) {
     return src(srcPath + 'assets/scss/main.scss') // если нужно компилировать 1 файл, то return src(srcPath + 'assets/scss/main.scss') 
         .pipe(sourcemaps.init())
         .pipe(plumber({
-            errorHandler : function(err) {
+            errorHandler: function (err) {
                 notify.onError({
-                    title:    "SCSS Error",
-                    message:  "Error: <%= error.message %>"
+                    title: "SCSS Error",
+                    message: "Error: <%= error.message %>"
                 })(err);
                 this.emit('end');
             }
@@ -116,7 +123,9 @@ function css(cb) {
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(dest(path.build.css))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 
     cb();
 }
@@ -126,10 +135,10 @@ function cssWatch(cb) {
     return src(srcPath + 'assets/scss/main.scss') // если нужно компилировать 1 файл, то return src(srcPath + 'assets/scss/main.scss')  
         .pipe(sourcemaps.init())
         .pipe(plumber({
-            errorHandler : function(err) {
+            errorHandler: function (err) {
                 notify.onError({
-                    title:    "SCSS Error",
-                    message:  "Error: <%= error.message %>"
+                    title: "SCSS Error",
+                    message: "Error: <%= error.message %>"
                 })(err);
                 this.emit('end');
             }
@@ -144,7 +153,9 @@ function cssWatch(cb) {
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(dest(path.build.css))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 
     cb();
 }
@@ -154,10 +165,10 @@ function js(cb) {
     return src(jsFiles) // если порядок не важен, то берем все файлы: return src(path.src.js, {base: srcPath + 'assets/js/'})
         .pipe(sourcemaps.init())
         .pipe(plumber({
-            errorHandler : function(err) {
+            errorHandler: function (err) {
                 notify.onError({
-                    title:    "JS Error",
-                    message:  "Error: <%= error.message %>"
+                    title: "JS Error",
+                    message: "Error: <%= error.message %>"
                 })(err);
                 this.emit('end');
             }
@@ -168,7 +179,9 @@ function js(cb) {
         // }))
         .pipe(sourcemaps.write('.'))
         .pipe(dest(path.build.js))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 
     cb();
 }
@@ -178,10 +191,10 @@ function jsWatch(cb) {
     return src(jsFiles) // если порядок не важен, то берем все файлы: return src(path.src.js, {base: srcPath + 'assets/js/'})
         .pipe(sourcemaps.init())
         .pipe(plumber({
-            errorHandler : function(err) {
+            errorHandler: function (err) {
                 notify.onError({
-                    title:    "JS Error",
-                    message:  "Error: <%= error.message %>"
+                    title: "JS Error",
+                    message: "Error: <%= error.message %>"
                 })(err);
                 this.emit('end');
             }
@@ -192,7 +205,9 @@ function jsWatch(cb) {
         // }))
         .pipe(sourcemaps.write('.'))
         .pipe(dest(path.build.js))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 
     cb();
 }
@@ -213,7 +228,9 @@ function images(cb) {
         //     })
         // ]))
         .pipe(dest(path.build.images))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 
     cb();
 }
@@ -222,7 +239,9 @@ function images(cb) {
 function fonts(cb) {
     return src(path.src.fonts)
         .pipe(dest(path.build.fonts))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 
     cb();
 }
