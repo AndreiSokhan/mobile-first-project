@@ -23,6 +23,9 @@
          position: absolute;
          bottom: -44px;
          left: 0px;
+         @media screen and (min-width: 576px) {
+            width: 506px;
+         }
       }
    }
 
@@ -77,6 +80,9 @@
    &__card-last {
       display: none;
       position: relative;
+      @media screen and (min-width: 576px) {
+      display: block;
+      }
       &::after {
          content: "";
          height: 1px;
@@ -86,6 +92,9 @@
          position: absolute;
          bottom: -44px;
          left: 0px;
+         @media screen and (min-width: 576px) {
+            width: 506px;
+         }
       }
    }
 

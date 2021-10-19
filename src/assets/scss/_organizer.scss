@@ -110,5 +110,8 @@
          top: 9px;
          right: -20px;
       }
+      @media screen and (min-width: 576px) {
+         margin-bottom: 73px;
+      }
    }
 }

@@ -7,19 +7,55 @@
    &__inner {}
 
    &__title {
-      padding-top: 10px;
-      margin-bottom: 61px;
-      max-width: 276px;
+      width: 276px;
       text-align: center;
+      margin: 0 auto;
+      margin-bottom: 40px;
       @include text(26px, 400, 32px, $textColor);
+      position: relative;
+
+      &::before {
+         content: "";
+         height: 1px;
+         width: 290px;
+         background: $secondaryColor;
+         display: none;
+         position: absolute;
+         top: -21px;
+
+         @media screen and (min-width: 576px) {
+            display: block;
+            width: 506px;
+            left: -111px;
+         }
+      }
+
+      @media screen and (min-width: 768px) {
+         text-align: left;
+         margin: 0 0 30px 0;
+         @include text(20px, 500, 29px, $textColor);
+      }
+   }
+
+   &__date {
+      @media screen and (min-width: 576px) {
+         display: flex;
+         align-items: center;
+      }
    }
 
    &__day {
       text-align: center;
       @include text(18px, 500, 26px, $textColor);
       padding-top: 20px;
-      margin-bottom: 16px;
+      margin: 0 14px 16px 0;
       position: relative;
+
+      @media screen and (min-width: 576px) {
+         text-align: left;
+         padding-left: 20px;
+      }
+
       &::before {
          content: "";
          height: 1px;
@@ -28,7 +64,13 @@
          display: block;
          position: absolute;
          top: 0;
+
+         @media screen and (min-width: 576px) {
+            width: 506px;
+            left: 0;
+         }
       }
+
       &::after {
          content: "";
          height: 1px;
@@ -37,16 +79,36 @@
          display: block;
          position: absolute;
          bottom: -16px;
+
+         @media screen and (min-width: 576px) {
+            width: 506px;
+            left: 0;
+         }
       }
    }
 
    &__img {
       display: none;
+
+      @media screen and (min-width: 576px) {
+         display: block;
+      }
    }
 
    &__time {
-      padding: 30px 0 30px 20px;
+      padding: 30px 20px 30px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media screen and (min-width: 576px) {
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+      }
+
       position: relative;
+
       &::after {
          content: "";
          height: 1px;
@@ -56,6 +118,10 @@
          position: absolute;
          bottom: 0px;
          left: 0px;
+
+         @media screen and (min-width: 576px) {
+            width: 506px;
+         }
       }
    }
 
@@ -75,9 +141,7 @@
       @include text(18px, 600, 22px, $textColor);
    }
 
-   &__place {
-
-   }
+   &__place {}
 
    &__btn {
       width: 130px;
@@ -85,7 +149,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      @include text(14px,500,17px,$accentColor);
+      @include text(14px, 500, 17px, $accentColor);
       background-color: transparent;
       border: solid $accentColor 2px;
       border-radius: 3px;
@@ -93,7 +157,7 @@
       -moz-border-radius: 3px;
       -ms-border-radius: 3px;
       -o-border-radius: 3px;
-}
+   }
 
    &__cup {
       padding-right: 12px;
@@ -103,8 +167,8 @@
       padding: 32px 0 29px 20px;
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
       position: relative;
+
       &::after {
          content: "";
          height: 1px;
@@ -114,6 +178,23 @@
          position: absolute;
          bottom: 0;
          left: 0;
+
+         @media screen and (min-width: 576px) {
+            width: 506px;
+         }
+      }
+   }
+
+   &__feedback {
+      @media screen and (min-width: 576px) {
+         display: flex;
+         align-items: center;
+      }
+   }
+
+   &__text-rating {
+      @media screen and (min-width: 576px) {
+         margin-right: 14px;
       }
    }
 
